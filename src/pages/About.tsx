@@ -6,7 +6,7 @@ export default function About() {
     <div className="max-w-4xl mx-auto">
       <div className="mb-12">
         <img
-          src="/photo/Sri_Maniteja.jpeg"
+          src={`${import.meta.env.BASE_URL}photo/Sri_Maniteja.jpeg`}
           alt="Sri Maniteja"
           className="w-48 h-48 md:w-64 md:h-64 object-cover rounded-full border-4 border-purple shadow-[8px_8px_0px_rgba(102,0,204,0.3)] mb-4 grayscale hover:grayscale-0 transition-all duration-500"
         />
