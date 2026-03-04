@@ -3,7 +3,7 @@ import { AboutIcon, WorkIcon, ArchiveIcon, ProjectsIcon, SkillsIcon } from "./Na
 
 export default function Navigation() {
   const location = useLocation();
-  const isHomePage = location.pathname === "/" || location.pathname === "/sri-maniteja" || location.pathname === "/sri-maniteja/";
+  const isHomePage = location.pathname === "/";
 
   const navItems = [
     { href: "/about", label: "about", icon: AboutIcon },
