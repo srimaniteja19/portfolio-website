@@ -1,4 +1,4 @@
-import { Routes, Route, useLocation } from 'react-router-dom'
+import { Routes, Route, useLocation, Navigate } from 'react-router-dom'
 import { useEffect } from 'react'
 import Layout from './components/Layout'
 import Home from './pages/Home'
@@ -41,6 +41,7 @@ function FirstStepPortfolio1() {
           <Route path="skills" element={<Skills />} />
           <Route path="archive" element={<Archive />} />
           <Route path="projects" element={<Projects />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </Layout>
     </div>
