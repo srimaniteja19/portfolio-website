@@ -2,16 +2,25 @@ import { ExternalLink } from "lucide-react";
 
 const projects = [
   {
+    title: "Job Application Tracker",
+    date: "Full-Stack App",
+    excerpt: "A full-stack job application tracker with sign-in (email/password, GitHub, and Google). Track applications, manage pipeline stages, and keep your job search organized from a single dashboard. AI-powered features: find similar jobs, job analysis, and interview prep. Built and deployed on Vercel.",
+    link: "https://mani-job-tracker.vercel.app/dashboard",
+    featured: true,
+  },
+  {
     title: "Engineering Insights on Hashnode",
     date: "Technical Writing",
     excerpt: "I write about the intersection of Java, Spring Boot, and Cloud Architecture. My articles explore practical solutions to complex backend challenges, focusing on clarity and best practices.",
     link: "https://maniteja19.hashnode.dev/",
+    featured: false,
   },
   {
     title: "The Journey of Continuous Learning",
     date: "Professional Growth",
     excerpt: "On Boot.dev, I learn about backend engineering and distributed systems.",
     link: "https://www.boot.dev/u/student-v7ibbw",
+    featured: false,
   },
 ];
 
@@ -29,12 +38,23 @@ export default function Projects() {
         {projects.map((project, index) => (
           <article
             key={index}
-            className="border-2 border-bright-purple p-6 hover:bg-bright-purple/10 transition-all group"
+            className={`border-2 p-6 transition-all group ${
+              project.featured
+                ? "border-bright-purple bg-bright-purple/10 hover:bg-bright-purple/20 shadow-[0_0_20px_rgba(168,85,247,0.15)]"
+                : "border-bright-purple hover:bg-bright-purple/10"
+            }`}
           >
             <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-4">
-              <h2 className="blocky-text text-xl md:text-2xl group-hover:glow-pulse">
-                {project.title}
-              </h2>
+              <div className="flex items-center gap-3 flex-wrap">
+                <h2 className="blocky-text text-xl md:text-2xl group-hover:glow-pulse">
+                  {project.title}
+                </h2>
+                {project.featured && (
+                  <span className="text-xs uppercase tracking-wider font-bold px-2 py-1 border border-bright-purple text-bright-purple">
+                    Featured
+                  </span>
+                )}
+              </div>
               <span className="text-sm uppercase tracking-wider font-bold whitespace-nowrap opacity-80">
                 {project.date}
               </span>
