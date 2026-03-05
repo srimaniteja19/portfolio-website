@@ -10,7 +10,7 @@ const projects = [
   {
     title: "The Journey of Continuous Learning",
     date: "Professional Growth",
-    excerpt: "On Boot.dev, I document my deep dive into backend engineering and distributed systems. It's a space where I refine my understanding of computer science fundamentals and stay ahead of industry trends.",
+    excerpt: "On Boot.dev, I learn about backend engineering and distributed systems.",
     link: "https://www.boot.dev/u/student-v7ibbw",
   },
 ];
